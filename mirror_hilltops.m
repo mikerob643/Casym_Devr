@@ -274,7 +274,7 @@ for i = 1:dxloop:nnz(OverlapDivB.Z==1) %-runlength  % For all pixels on the wate
     % Flowpath of side 2
     side2ix = sub2ind(size(DEM.Z),jr,jc);
     [IX_flowpath,distance] = flowpathextract(FD,side2ix);
-    if length(IX_flowpath)<Lh || nnz(isnan(IX_flowpath_1(:,i)))>0  % changed an i to k
+    if length(IX_flowpath)<Lh || nnz(isnan(IX_flowpath_1(:,k)))>0  % changed an i to k
         IX_flowpath=ones(Lh,1)*NaN;
         distance = ones(Lh,1)*NaN;
         IX_flowpath_1(:,i) = NaN; % In case side 1 wasn't NaN, but side 2 is.
