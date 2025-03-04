@@ -381,10 +381,11 @@ sout["leftavg"]= leftavg
 
 sout.to_csv("sout.csv")
   
-    # enter in data from above loop without doint it 
+    # saves data so the above section of code does not need to be run every time.  
+   
    
    #%%
-   
+      # import data. 
 sout= pd.read_csv('sout.csv',header=0)
 right= np.array((sout["right"]))
 normright= np.array((sout["normright"]))
